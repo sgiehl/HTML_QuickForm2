@@ -372,7 +372,7 @@ abstract class HTML_QuickForm2_Container extends HTML_QuickForm2_Node
     *
     * @return    HTML_QuickForm2_ContainerIterator
     */
-    public function getIterator()
+    public function getIterator(): HTML_QuickForm2_ContainerIterator
     {
         return new HTML_QuickForm2_ContainerIterator($this);
     }
@@ -384,7 +384,7 @@ abstract class HTML_QuickForm2_Container extends HTML_QuickForm2_Node
     *
     * @return   RecursiveIteratorIterator
     */
-    public function getRecursiveIterator($mode = RecursiveIteratorIterator::SELF_FIRST)
+    public function getRecursiveIterator($mode = RecursiveIteratorIterator::SELF_FIRST): RecursiveIteratorIterator
     {
         return new RecursiveIteratorIterator(
             new HTML_QuickForm2_ContainerIterator($this), $mode
@@ -396,7 +396,7 @@ abstract class HTML_QuickForm2_Container extends HTML_QuickForm2_Node
     *
     * @return    int
     */
-    public function count()
+    public function count(): int
     {
         return count($this->elements);
     }
