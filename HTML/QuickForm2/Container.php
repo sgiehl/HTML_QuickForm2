@@ -433,7 +433,7 @@ abstract class HTML_QuickForm2_Container extends HTML_QuickForm2_Node
         // on contained elements, see HTML_QuickForm2Test::testFormRule()
         if ($valid) {
             foreach ($this->getRecursiveIterator() as $item) {
-                if (0 < strlen($item->getError())) {
+                if (0 < strlen($item->getError() ?? '')) {
                     return false;
                 }
             }
